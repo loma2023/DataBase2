@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>كشف حساب النقدية</title>
+</head>
+
+<body>
+    <div class="list"></div>
+    <div class="main">
+        <header class="header"></header>
+
+        <div class="container-table">
+            <img class="account_img" src="https://b.top4top.io/p_2690widbx1.png">
+            <section class="section-search">
+                <div>
+                    <select class="nameCustomer" onchange="Search()">
+                        <option disabled selected hidden>اختار نوع العمليه</option>
+                        <option value="مقبوضات">مقبوضات</option>
+                        <option value="مدفوعات">مدفوعات</option>
+                    </select>
+                    <a class="fas fa-search"></a>
+                </div>
+                <div>
+                    <input class="SDate" type="date" onchange="Search()">
+                    <a>من</a>
+                </div>
+                <div>
+                    <a>الي</a>
+                    <input class="EDate" type="date" onchange="Search()">
+                </div>
+            </section>
+            <div class="parent-table">
+                <table>
+                    <thead class="table-head">
+                        <tr>
+                            <td style="width: 3%;">ID</td>
+                            <td style="width: 14%;">التاريخ</td>
+                            <td style="width: 16%;">العمليه</td>
+                            <td style="width: 49%;">بيان</td>
+                            <td style="width: 6%;">مدين</td>
+                            <td style="width: 6%;">دائن</td>
+                            <td style="width: 6%;">الرصيد</td>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+        <div class="loader">
+            <div class="bg-loader">
+                <div class="load"></div>
+            </div>
+            <img src="CSS/loader-GIF.gif" alt="" >
+        </div>
+
+        <a onclick="Doprint(event)" class="fas fa-print"></a>
+        <footer class="footer"></footer>
+    </div>
+
+
+
+
+
+
+    <!-- =========== Scripts =========  -->
+    <script src="JS/main.js"></script>
+    <script src="JS/Account-Cash.js"></script>
+</body>
+
+</html>

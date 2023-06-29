@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>الفواتير</title>
+</head>
+
+<body>
+    <div class="list"></div>
+    <div class="main">
+        <header class="header"></header>
+
+        <div class="con-Receipt continer-Receipts">
+            <div>
+                <section class="section-search">
+                    <input class="date" type="date">
+                    <select class="typeReceipt">
+                        <option value="0" disabled selected hidden>نوع الفاتورة </option>
+                        <option value="تأجير آجل">تأجير آجل</option>
+                        <option value="استئجار آجل">استئجار آجل</option>
+                        <option value="تأجير نقدي">تأجير نقدي</option>
+                        <option value="استئجار نقدي">استئجار نقدي </option>
+                    </select>
+                    <select class="nameCustomer">
+                        <option value="0" disabled selected hidden>اسم العميل</option>
+                    </select>
+                </section>
+                <section class="section-search">
+                    <input class="R-item" type="text" placeholder="الصنف وكميته">
+                    <input class="price" type="number" placeholder="القيمة ">
+                    <input class="statement" type="text" placeholder="بيان">
+                    <input class="btn_save" type="button" value="إضافة" onclick="additem(id)" id="save">
+                </section>
+                <div class="container-table">
+                    <div class="parent-table">
+                        <table>
+                            <thead class="table-head">
+                                <tr>
+                                    <td style="width: 28%;">الصنف</td>
+                                    <td style="width: 17%;">القيمه</td>
+                                    <td style="width: 38%;">البيان</td>
+                                    <td style="width: 17%;">تعديل - حذف</td>
+                                </tr>
+                            </thead>
+
+                            <tbody class="table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <div>
+                        <h1 class="number">R</h1>
+                        <h3>رقم الفاتورة</h1>
+                    </div>
+                    <i class="fas fa-file"></i>
+                </div>
+
+                <div class="box">
+                    <div>
+                        <h1 class="subTotal">0</h1>
+                        <h3>الاجمالي</h1>
+                    </div>
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <input class="btn_insert save" id="" type="button" value="حفظ الفاتورة" onclick="insert_value(event)">
+            </div>
+        </div>
+
+        <div class="container-table" style="margin-top: 70px;">
+            <div class="parent-table">
+                <table >
+                    <thead class="table-head">
+                        <tr>
+                            <td style="width: 3%;">ID</td>
+                            <td style="width: 10%;">التاريخ</td>
+                            <td style="width: 10%;">نوع الفاتورة</td>
+                            <td style="width: 16%;">اسم العميل</td>
+                            <td style="width: 11%;">الصنف</td>
+                            <td style="width: 8%;">القيمة</td>
+                            <td style="width: 30%;">بيان</td>
+                            <td style="width: 12%;">تعديل او حذف</td>
+                        </tr>
+                    </thead>
+
+                    <tbody class="table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="loader">
+            <div class="bg-loader">
+                <div class="load"></div>
+            </div>
+            <img src="CSS/loader-GIF.gif" alt="" >
+        </div>
+        
+        <footer class="footer"></footer>
+        
+    </div>
+
+
+    <!-- =========== Scripts =========  -->
+    <script src="JS/main.js"></script>
+    <script src="JS/General_Receipts.js"></script>
+</body>
+
+</html>

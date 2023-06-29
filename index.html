@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="CSS/login.css" />
+  <title>Sign in</title>
+</head>
+
+<body>
+  <div class="loader" style="display: none;">
+    <div class="bg-loader">
+      <div class="load"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form action="#" class="sign-in-form">
+          <h2 class="title">Sign in</h2>
+
+          <div class="input-field">
+            <i class="fas fa-user"></i><input type="text" placeholder="Username" required="required" class="username" />
+          </div>
+
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" required="required" class="password" />
+            <i onclick="showPassword(event)" class="eye fas fa-eye"></i>
+          </div>
+
+          <input type="button" value="Login" class="btn solid" onclick="login()">
+
+          <p class="social-text">تابعنا علي مواقع التواصل</p>
+          <div class="social-media">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-google"></a>
+            <a href="#" class="fab fa-linkedin-in"></a>
+          </div>
+        </form>
+
+        <form action="#" class="sign-up-form">
+          <h2 class="title">Sign up</h2>
+
+          <div class="input-field">
+            <i class="fas fa-user"></i><input type="text" placeholder="Username" />
+          </div>
+
+          <div class="input-field">
+            <i class="fas fa-envelope"></i><input type="email" placeholder="Email" />
+          </div>
+
+          <div class="input-field">
+            <i class="fas fa-lock"></i><input type="password" placeholder="Password" />
+            <i onclick="showPassword(event)" class="eye fas fa-eye"></i>
+
+          </div>
+
+          <input type="submit" class="btn" value="Sign up" />
+
+          <p class="social-text">تابعنا علي مواقع التواصل</p>
+          <div class="social-media">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-google"></a>
+            <a href="#" class="fab fa-linkedin-in"></a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3> نسيت كلمة المرور ؟</h3>
+          <p> </p>
+          <button class="btn transparent" id="sign-up-btn">Sign up</button>
+        </div>
+        <img src="CSS/log.svg" class="image" alt="" />
+      </div>
+
+      <div class="panel right-panel">
+        <div class="content">
+          <h3> تسجيل الدخول </h3>
+          <p></p>
+          <button class="btn transparent" id="sign-in-btn">Sign in</button>
+        </div>
+        <!-- <img src="img/register.svg" class="image" alt="" /> -->
+        <img src="https://abuyunis.com/files/apps/397841-PD1N4E-120.png" class="image" alt="" />
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="JS/login.js"></script>
+</body>
+
+</html>

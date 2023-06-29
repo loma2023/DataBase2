@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>الاعدادات</title>
+</head>
+
+<body>
+
+    <div class="list"></div>
+    <div class="main">
+        <header class="header"></header>
+
+        <div class="container-setting">
+            <div class="left">
+                <a onclick="Edit()" class="fa-solid fa-pen-to-square"></a>
+                <img class="imgUser" src="" alt="">
+                <h2></h2>
+                <p style="margin: 10px;"></p>
+                <p style="margin: 10px;"></p>
+                <div class="div-details">
+                    <h1>صلاحيات المستخدم</h1>
+                    <div class="details">
+                        <h3>نوع المستخدم : </h3>
+                        <p></p>
+                    </div>
+                    <div class="details">
+                        <h3>ادخال البيانات : </h3>
+                        <p></p>
+                    </div>
+                    <div class="details">
+                        <h3>تعديل البيانات : </h3>
+                        <p></p>
+                    </div>
+                    <div class="details">
+                        <h3>حذف البيانات : </h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div id="right" class="right">
+                <div class="upload">
+                    <img id="CSS/avatar.svg" class="imgUser" src="CSS/avatar.svg" alt="">
+                    <img class="imgloader" src="CSS/loader-GIF.gif" alt="" style="display: none;">
+                    <div class="input-icon">
+                        <input class="file" type="file" accept="image/*" onchange="userimg(event)">
+                        <i class="fa fa-camera"></i>
+                    </div>
+                </div>
+
+                <section class="section-form" style="grid-template-columns: 1fr;">
+                    <form>
+                        <input id="Username" class="Username" type="text" placeholder="اسم المستخدم">
+                        <input id="phone" class="phone" type="tel" placeholder="جوال المستخدم">
+                        <input id="email" class="email" type="email" placeholder="Example@gmail.com">
+                        <input id="password" class="password" type="password" placeholder="كلمة مرور">
+                        <input id="Rpassword" class="Rpassword" type="password" placeholder="تأكيد كلمة المرور">
+                        <div>
+                            <label for="a" class="label-bg" id="https://www.mexatk.com/wp-content/uploads/2015/11/%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA-%D8%B4%D8%A7%D8%B4%D8%A9-4.jpg">خلفية الصفحة الرئيسية</label>
+                            <input id="a" class="file-bg" type="file" accept="image/*" onchange="bgimg(event)">
+                        </div>
+                        <select id="typeuser" class="typeuser" onchange="ShowPowers(value)">
+                            <option disabled selected hidden>نوع المستخدم</option>
+                            <option value="Admin">Admin</option>
+                            <option value="User">User</option>
+                        </select>
+                    </form>
+                    <div class="parent-power" style="text-align: center;display: none;">
+                        <h1>صلاحيات المستخدم</h1>
+                        <div class="powers">
+                            <div>
+                                <label for="b">حذف بيانات</label>
+                                <input id="b" class="checkbox Delete-box" type="checkbox" value="false">
+                            </div>
+                            <div>
+                                <label for="c">تعديل بيانات</label>
+                                <input id="c" class="checkbox Edit-box" type="checkbox" value="false">
+                            </div>
+                            <div>
+                                <label for="d">ادخال بيانات</label>
+                                <input id="d" class="checkbox Insert-box" type="checkbox" value="false">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" id="save" onclick="insert_value(id)" value="حــفــظ" class="btn_save">
+
+                </section>
+            </div>
+        </div>
+
+
+        <div class="loader Done">
+            <div class="bg-loader">
+                <div class="load"></div>
+            </div>
+            <img src="CSS/loader-GIF.gif" alt="">
+        </div>
+
+        <footer class="footer"></footer>
+    </div>
+    <!-- =========== Scripts =========  -->
+
+    <script src="JS/main.js"></script>
+    <script src="JS/Settings.js"></script>
+
+</body>
+
+</html>

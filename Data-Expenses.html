@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>المصروفات</title>
+</head>
+
+<body>
+    <div class="list"></div>
+    <div class="main">
+        <header class="header"></header>
+
+        <section class="section-form">
+            <img src="https://static.vecteezy.com/system/resources/previews/021/220/740/non_2x/agile-development-methodology-business-concept-flat-style-design-illustration-isolated-on-white-background-agile-life-cycle-for-software-development-diagram-business-people-run-into-project-vector.jpg">
+            <form>
+                <input class="name" type="text" placeholder="اسم المصروف">
+                <input type="button" id="save" onclick="insert_value(id)" value="حــفــظ" class="btn_save">
+            </form>
+        </section>
+        
+        <div class="container-contact con-Expenses"></div>
+        
+
+        <div class="loader">
+            <div class="bg-loader">
+                <div class="load"></div>
+            </div>
+            <img src="CSS/loader-GIF.gif" alt="" >
+        </div>
+
+        <footer class="footer"></footer>
+
+    </div>
+
+
+    <!-- =========== Scripts =========  -->
+    <script src="JS/main.js"></script>
+    <script src="JS/Data-Expenses.js"></script>
+</body>
+
+</html>
